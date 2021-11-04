@@ -5,6 +5,9 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
     plugins: [vue({ refTransform: true })],
     optimizeDeps: {
-        exclude: ['swiper/*'],
+        exclude: ['swiper'],
     },
+    build: {
+        outDir: 'docs'
+    }
 });
